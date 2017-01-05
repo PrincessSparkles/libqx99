@@ -20,4 +20,4 @@ set (CMAKE_CXX_STANDARD 14)
 #
 # This is the libqx99 project
 #
-project (qx99 VERSION 0.1 LANGUAGES CXX)
+project (qx99 VERSION 0.1 LANGUAGES CXX) 
