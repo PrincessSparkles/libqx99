@@ -47,6 +47,15 @@ public:
     /// </summary>
     ~Range() = default;
 
+    /// <summary>
+    /// Does the Range contain the given value?
+    /// </summary>
+    /// <param name="value">The value to test</param>
+    /// <returns>
+    /// true if low &lt;= value &lt;= high
+    /// </returns>
+    bool Contains(RangeDigitType value) const;
+
 protected:
 
 private:

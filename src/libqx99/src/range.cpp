@@ -31,5 +31,20 @@ Range::Range(RangeDigitType low, RangeDigitType high) :
 }
 
 /* ************************************************************************* */
+
+bool Range::Contains(RangeDigitType value) const
+{
+    bool result = false;
+    
+    if (_low <= value && _high >= value)
+    {
+        // result is initialised to false, so we don't need the else clause
+        result = true;        
+    }
+    
+    return result;
+}
+
+/* ************************************************************************* */
 /* ************************************************************************* */
 /* ************************************************************************* */
