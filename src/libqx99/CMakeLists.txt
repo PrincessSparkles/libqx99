@@ -16,7 +16,7 @@ project(libqx99 VERSION 0.1 LANGUAGES CXX)
 # list the source files
 #
 add_library(qx99
-	src/qx99.cpp)
+	)
 	
 #
 # We're using C++14
