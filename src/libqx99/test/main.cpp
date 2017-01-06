@@ -1,29 +1,24 @@
 /*
- * qx99.cpp
+ * main.cpp
  *
- * Defines the version number of the qx99 library
+ * main entry point for the libqx99 unit test program
  *
- * (c) 2017 qx99.co.uk 
+ * (c) 2017 qx99.co.uk
  */
  
 /* ************************************************************************* */
 
-#include <cstdint>  // std::uint32_t
+#include <gmock/gmock.h>
 
 /* ************************************************************************* */
 
-namespace
+/* ************************************************************************* */
+/* ************************************************************************* */
+
+int main(int argc, char *argv[])
 {
-	const std::uint16_t VERSION_MAJOR = 0;
-	const std::uint16_t VERSION_MINOR = 1;
-}
-
-/* ************************************************************************* */
-/* ************************************************************************* */
-
-std::uint32_t GetVersion()
-{
-	return VERSION_MAJOR << 16 | VERSION_MINOR;
+  ::testing::InitGoogleMock(&argc, argv);
+  return RUN_ALL_TESTS();
 }
 
 /* ************************************************************************* */
