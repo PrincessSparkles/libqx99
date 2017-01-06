@@ -16,9 +16,20 @@ project(libqx99 VERSION 0.1 LANGUAGES CXX)
 # list the source files
 #
 add_library(qx99
-	)
+	src/range.cpp)
 	
 #
 # We're using C++14
 #
 set_property(TARGET qx99 PROPERTY CXX_STANDARD 14)
+
+#
+# Sort out the include paths. PUBLIC headers will be added to consumers
+# build paths 
+#
+target_include_directories(qx99 
+    PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>
+    PRIVATE
+        src)
